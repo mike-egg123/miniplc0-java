@@ -81,19 +81,19 @@ public class Tokenizer {
         }
         String tmp = new String(ident_or_keyword_str,0,i);
         switch (tmp){
-            case "BEGIN":
+            case "begin":
                 return new Token(TokenType.Begin, tmp, startPos, it.currentPos());
 
-            case "END":
+            case "end":
                 return new Token(TokenType.End, tmp, startPos, it.currentPos());
 
-            case "VAR":
+            case "var":
                 return new Token(TokenType.Var, tmp, startPos, it.currentPos());
 
-            case "CONST":
+            case "const":
                 return new Token(TokenType.Const, tmp, startPos, it.currentPos());
 
-            case "PRINT":
+            case "print":
                 return new Token(TokenType.Print, tmp, startPos, it.currentPos());
         }
         return new Token(TokenType.Ident, tmp, startPos, it.currentPos());

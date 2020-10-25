@@ -104,6 +104,7 @@ public final class Analyser {
      */
     private Token expect(TokenType tt) throws CompileError {
         var token = peek();
+        //System.out.println(token.getTokenType());
         if (token.getTokenType() == tt) {
             return next();
         } else {
